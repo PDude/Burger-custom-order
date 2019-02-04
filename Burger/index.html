@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Mali:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div class="content" id="content">
+      <i id="check" class="fa check fa-check"></i>
+      <h1>
+        Custom Your burger
+      </h1>
+      <form id="form">
+        <h2 id="size_title">
+          Choose burger size
+        </h2>
+        <div class="size">
+          <div class="size_small">
+            <input type="radio" id="size_s" onclick="getBurger()" name="burgerSize">
+            <label for="size_s">Small burger<br> 
+              <span>
+                (17 UAH, 250 calories)
+              </span>
+            </label>
+          </div>
+          <span class="separator"></span>
+          <div class="size_b">
+            <input type="radio" onclick="getBurger()" id="size_b" name="burgerSize">
+            <label for="size_b">Big Burger<br>
+              <span>
+                (25 UAH, 340 calories)
+              </span>
+            </label>
+          </div>
+        </div>
+        <h2 class="stuffing_title" id="stuffing_title">
+          Choose burger stuffing
+        </h2>
+        <div class="stuffing">
+          <div class="stuffing_cheese">
+            <input type="checkbox" onclick="getBurger()" name="burger[]" class="burgers" id="cheese">
+            <label for="cheese">Cheese <span>(+ 4 UAH, + 25 calories)</span></label>
+          </div>
+          <div class="stuffing_salad">
+            <input type="checkbox" onclick="getBurger()" name="burger[]" class="burgers" id="salad">
+            <label for="salad">Salad <span>(+ 5 UAH, + 5 calories)</span></label>
+          </div>
+          <div class="stuffing_ham">
+            <input type="checkbox" onclick="getBurger()" name="burger[]" class="burgers" id="ham">
+            <label for="ham">Ham <span>(+ 10 UAH, + 50 calories)</span></label>
+          </div>
+        </div>
+        <h2 class="addons_title">
+          Addons
+        </h2>
+        <div class="addons">
+          <div class="addons_sauce">
+            <input type="checkbox" onclick="getBurger()" class="burgers" id="sauce">
+            <label for="sauce">Sauce <span>(+ 5 UAH, 0 calories)</span></label>
+          </div>
+          <div class="addons_mayonnaise">
+            <input type="checkbox" onclick="getBurger()" class="burgers" id="mayonnaise">
+            <label for="mayonnaise">Mayonnaise <span>(+ 4 UAH, + 10 calories)</span></label>
+          </div>
+        </div>
+        <div class="total">
+          Total : <span id="total_price">0</span> UAH (<span id="total_calories">0</span> calories)
+        </div>
+        <button type="button" class="order" onclick="return isChecked()" id="order">
+          Order burger
+        </button>
+        <button type="button" class="order" id="order_again">
+          Make one more order
+        </button>
+      </form>
+    </div>
+  </header>
+  <script src="js/main.js"></script>
+</body>
+</html>
